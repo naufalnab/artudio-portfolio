@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { siteConfig, generateWhatsAppMessage, ProjectBriefData } from "@/lib/siteConfig";
+import { siteConfig, getWhatsAppLink, ProjectBriefData } from "@/lib/siteConfig";
 import {
   ArrowRight,
   ArrowLeft,
@@ -151,9 +151,7 @@ export default function BriefBuilder({ initialProjectType }: BriefBuilderProps) 
   };
 
   const handleLaunchWhatsApp = () => {
-    const encoded = generateWhatsAppMessage(formData);
-    const waUrl = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encoded}`;
-    window.open(waUrl, "_blank", "noopener,noreferrer");
+    window.open(getWhatsAppLink(formData), "_blank", "noopener,noreferrer");
   };
 
   return (

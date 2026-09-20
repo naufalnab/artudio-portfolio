@@ -7,7 +7,7 @@ export default function Footer() {
   const waUrl = getWhatsAppLink();
 
   return (
-    <footer className="bg-[#161714] text-[#FAF9F6] border-t border-[#262723] pt-20 pb-12">
+    <footer id="site-footer" className="bg-[#161714] text-[#FAF9F6] border-t border-[#262723] pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Editorial Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
@@ -99,7 +99,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#8A8880]">
           <div className="space-y-1">
             <p>© {new Date().getFullYear()} ARTUDIO Interior & Architecture. All rights reserved.</p>
-            <p className="text-[11px] text-[#8A8880]/80">
+            <p className="text-xs text-[#8A8880]/80">
               Sebagian visual dan studi proyek pada versi ini merupakan materi konsep untuk demonstrasi presentasi.
             </p>
           </div>

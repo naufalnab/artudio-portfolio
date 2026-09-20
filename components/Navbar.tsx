@@ -170,7 +170,7 @@ export default function Navbar() {
               Start a Project Brief
             </Link>
             <p className="text-center text-xs text-[#8A8880] tracking-wider">
-              Cipedak, Jagakarsa • Jakarta Selatan
+              {siteConfig.address.district} • {siteConfig.address.city}
             </p>
           </div>
         </div>

@@ -68,9 +68,9 @@ export default function ProcessPage() {
               <div className="lg:col-span-3 bg-[#F4F2ED] p-5 border border-[#D8D5CC] space-y-3">
                 <div className="flex items-center text-xs uppercase tracking-wider text-[#181817] font-medium">
                   <FileCheck2 className="w-3.5 h-3.5 mr-1.5 text-[#8B7654]" />
-                  <span>Dokumen Serah Terima:</span>
+                  <span>Contoh keluaran tahap:</span>
                 </div>
-                <ul className="space-y-2 text-xs text-[#50504C]">
+                <ul className="space-y-2 text-xs sm:text-sm text-[#50504C]">
                   {step.keyOutputs.map((out, oIdx) => (
                     <li key={oIdx} className="flex items-start">
                       <span className="w-1.5 h-1.5 bg-[#8B7654] rounded-full mr-2 mt-1.5 shrink-0" />

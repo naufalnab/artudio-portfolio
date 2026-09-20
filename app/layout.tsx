@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | ARTUDIO Interior & Architecture",
   },
   description:
-    "ARTUDIO adalah studio perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual yang dipimpin oleh Erfan Radistya, ST.",
+    "ARTUDIO adalah studio perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual di Jakarta Selatan.",
   keywords: [
     "ARTUDIO",
     "Arsitek Jakarta Selatan",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "Arsitektur Kontemporer",
     "Renovasi Rumah",
     "Developer Planning",
-    "Erfan Radistya",
+    siteConfig.principal.name,
   ],
   authors: [{ name: "ARTUDIO" }],
   creator: "ARTUDIO",
@@ -78,8 +78,8 @@ export default function RootLayout({
       "Studio perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual.",
     founder: {
       "@type": "Person",
-      name: "Erfan Radistya, ST",
-      jobTitle: "Founder / Principal",
+      name: siteConfig.principal.name,
+      jobTitle: siteConfig.principal.role,
     },
     telephone: siteConfig.contact.displayWhatsapp,
     address: {

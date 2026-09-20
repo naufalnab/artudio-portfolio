@@ -68,7 +68,7 @@ export default function ServicesPage() {
 
                   <div className="pt-2">
                     <Link
-                      href={`/start-project?projectType=${encodeURIComponent(svc.title)}`}
+                      href={`/start-project?service=${encodeURIComponent(svc.title)}`}
                       className="px-6 py-3.5 bg-[#181817] text-[#FAF9F6] text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#333330] transition-colors inline-flex items-center"
                     >
                       <span>Inquire {svc.title}</span>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                       {svc.deliverables.map((del, idx) => (
                         <div
                           key={idx}
-                          className="p-3 bg-white border border-[#D8D5CC] text-xs text-[#181817] flex items-center"
+                          className="p-3 bg-white border border-[#D8D5CC] text-xs sm:text-sm text-[#181817] flex items-center"
                         >
                           <span className="w-1.5 h-1.5 bg-[#181817] rounded-full mr-2 shrink-0" />
                           <span>{del}</span>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
             Membutuhkan kombinasi arsitektur dan interior terpadu?
           </h3>
           <p className="text-xs sm:text-sm text-[#D8D5CC] max-w-xl mx-auto leading-relaxed">
-            Sebagian besar proyek klien kami menggabungkan perancangan arsitektur dan interior secara simultan untuk menjaga keselarasan material dan efisiensi budget.
+            Layanan dapat dikombinasikan sesuai kebutuhan untuk menjaga arah ruang, material, dan identitas visual tetap selaras.
           </p>
           <div className="pt-2">
             <Link

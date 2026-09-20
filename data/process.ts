@@ -13,7 +13,7 @@ export const processSteps: ProcessStep[] = [
     subtitle: "Mendengarkan dan memetakan ekspektasi mendasar.",
     description:
       "Tahap dialog mendalam untuk memahami rutinitas keluarga/bisnis, preferensi estetika, batas anggaran (budget constraints), serta target waktu proyek. Tahap ini meletakkan fondasi yang tepat sebelum garis pertama digambar.",
-    keyOutputs: ["Project Brief Document", "Scope of Work Alignment", "Initial Budget & Schedule Framework"],
+    keyOutputs: ["Ringkasan kebutuhan proyek", "Penyelarasan arah dan lingkup awal", "Kerangka budget dan jadwal awal"],
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ export const processSteps: ProcessStep[] = [
     subtitle: "Membaca potensi dan batasan tapak fisik.",
     description:
       "Investigasi terhadap orientasi matahari, arah angin dominan, kontur tanah, regulasi sempadan bangunan setempat (GSB/KDB), serta kondisi bangunan di sekelilingnya untuk menghasilkan desain yang adaptif.",
-    keyOutputs: ["Solar Path & Wind Diagram", "Zoning Regulation Check", "Site Constraint Matrix"],
+    keyOutputs: ["Pembacaan konteks tapak", "Catatan batasan yang perlu dibahas", "Arah analisis sesuai kebutuhan proyek"],
   },
   {
     number: "03",
@@ -29,7 +29,7 @@ export const processSteps: ProcessStep[] = [
     subtitle: "Melahirkan arah bentuk dan tata ruang utama.",
     description:
       "Merumuskan zonasi makro, organisasi ruang (spatial layout), massa bangunan, dan visual direction awal. Klien diajak melihat gambaran besar bagaimana ruang akan terasa dan berfungsi.",
-    keyOutputs: ["Preliminary Spatial Layout", "Massing Study Visuals", "Design Direction & Mood Board"],
+    keyOutputs: ["Eksplorasi tata ruang awal", "Studi massa atau visual awal", "Arah desain dan moodboard"],
   },
   {
     number: "04",
@@ -37,15 +37,15 @@ export const processSteps: ProcessStep[] = [
     subtitle: "Menyempurnakan detail, material, dan proporsi.",
     description:
       "Mengembangkan konsep ke tingkat presisi yang lebih tinggi: pemilihan material nyata, detail fasad, integrasi tata cahaya, hingga eksplorasi 3D interior yang realistis.",
-    keyOutputs: ["Photorealistic 3D Visualizations", "Material Palette Selection", "Dimensioned Architectural Plans"],
+    keyOutputs: ["Visualisasi 3D sesuai scope", "Arah material", "Pengembangan denah dan detail"],
   },
   {
     number: "05",
     title: "Technical Documentation",
-    subtitle: "Panduan presisi bagi kontraktor di lapangan.",
+    subtitle: "Mengembangkan informasi desain sesuai lingkup proyek.",
     description:
-      "Penyusunan gambar kerja detail (Detailed Engineering Design/DED) yang lengkap dan terukur sehingga pelaksana di lapangan memiliki instruksi yang tidak menimbulkan salah interpretasi.",
-    keyOutputs: ["Architectural Working Drawings (DED)", "Door & Window Schedules", "Material Specifications (RKS)"],
+      "Pengembangan gambar dan informasi desain sesuai kebutuhan proyek, agar arah implementasi dapat dibahas dengan lebih jelas bersama pihak terkait.",
+    keyOutputs: ["Gambar kerja / detail sesuai lingkup proyek", "Detail elemen arsitektur sesuai kebutuhan", "Arahan material & spesifikasi sesuai scope"],
   },
   {
     number: "06",
@@ -53,7 +53,7 @@ export const processSteps: ProcessStep[] = [
     subtitle: "Pendampingan implementasi sesuai kesepakatan scope.",
     description:
       "Review keselarasan berkala terhadap implementasi material dan detail desain di lapangan untuk memastikan kualitas ruang terbangun setia pada dokumen perancangan awal.",
-    keyOutputs: ["Design Clarification Support", "Material Sample Approval", "Periodic Design Alignment Review"],
+    keyOutputs: ["Dukungan klarifikasi desain", "Pembahasan arah material bila diperlukan", "Review keselarasan desain sesuai kesepakatan"],
   },
 ];
 

@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Studio & Philosophy",
   description:
-    "Mengenal pendekatan arsitektural ARTUDIO, filosofi desain ruang, dan profil Principal Founder Erfan Radistya, ST.",
+    "Mengenal pendekatan arsitektural ARTUDIO, filosofi desain ruang, dan profil principal ARTUDIO.",
 };
 
 export default function StudioPage() {
@@ -67,14 +67,14 @@ export default function StudioPage() {
               <div className="font-mono text-xs uppercase tracking-wider text-[#50504C]">
                 {siteConfig.principal.role}
               </div>
-              <p className="font-editorial text-xl text-[#50504C] leading-snug">
-                {siteConfig.experience.display} {siteConfig.experience.label}
+              <p className="mt-3 pt-4 border-t border-[#D8D5CC] font-editorial text-2xl text-[#181817] leading-snug">
+                {siteConfig.experience.display} <span className="text-lg text-[#50504C]">{siteConfig.experience.label}</span>
               </p>
             </div>
 
             <div className="lg:col-span-7 space-y-4 text-sm text-[#50504C] leading-relaxed">
               <p>
-                Erfan Radistya, ST memimpin ARTUDIO dengan pengalaman lebih dari dua dekade dalam perencanaan bangunan, interior, dan desain visual.
+                {siteConfig.principal.name} memimpin ARTUDIO dengan pengalaman lebih dari dua dekade dalam perencanaan bangunan, interior, dan desain visual.
               </p>
               <p>
                 ARTUDIO berkembang dari pengalaman panjang dalam perencanaan bangunan, interior, dan komunikasi visual — dengan kebutuhan pengguna sebagai dasar keputusan desain.

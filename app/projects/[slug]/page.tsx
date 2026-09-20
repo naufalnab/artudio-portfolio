@@ -75,7 +75,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Key Architectural Metadata Bar */}
-        <div className="mt-10 pt-6 border-t border-[#D8D5CC] grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 text-xs text-[#50504C] font-mono">
+        <div className="mt-10 pt-6 border-t border-[#D8D5CC] grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 text-xs sm:text-sm text-[#50504C] font-mono">
           <div>
             <span className="text-[#8A8880] block text-[10px] uppercase font-sans tracking-wider mb-1">Location</span>
             <span className="text-[#181817] font-medium">{project.location}</span>
@@ -343,7 +343,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             Have a project in mind similar to {project.title}?
           </h3>
           <p className="text-xs sm:text-sm text-[#50504C] max-w-xl mx-auto leading-relaxed">
-            Konsultasikan rencana hunian atau ruang komersial Anda bersama tim arsitek ARTUDIO.
+            Konsultasikan rencana hunian atau ruang komersial Anda bersama ARTUDIO.
           </p>
           <div className="pt-2">
             <Link

@@ -107,7 +107,7 @@ export const projectsData: ProjectItem[] = [
     ],
     brief: {
       clientNeed:
-        "Klien menginginkan hunian keluarga 4 orang yang tenang dan tidak terasa sempit di lahan perkotaan. Prioritas utama adalah sirkulasi udara alami dan privasi maksimal dari jalan raya tanpa mengorbankan masuknya cahaya matahari.",
+        "Studi konsep hunian perkotaan yang mengeksplorasi suasana tenang, privasi, dan hubungan antara ruang keluarga dengan cahaya alami.",
       siteConstraints:
         "Lahan menghadap ke arah barat dengan intensitas panas sore yang signifikan, serta kepadatan bangunan sekitar yang membatasi bukaan samping konvensional.",
       keyChallenge:
@@ -146,7 +146,7 @@ export const projectsData: ProjectItem[] = [
       { title: "Longitudinal Cross-Section", subtitle: "Stack effect ventilation chimney and solar altitude angle analysis", aspect: "16:9", type: "section" },
     ],
     outcome:
-      "Casa Courtyard mendefinisikan hunian tropis kontemporer yang hening, efisien energi, dan memiliki identitas arsitektur yang kuat tanpa elemen dekoratif berlebihan.",
+      "Studi konsep hunian tropis kontemporer yang mengeksplorasi suasana hening dan identitas arsitektur yang tenang.",
   },
   {
     id: "proj-02",
@@ -184,7 +184,7 @@ export const projectsData: ProjectItem[] = [
     ],
     brief: {
       clientNeed:
-        "Sebuah kediaman untuk pasangan yang menginginkan koneksi visual langsung ke pepohonan dan air di setiap sudut rumah, dengan interior yang rapi dan bebas dari kekacauan visual.",
+        "Studi konsep hunian yang mengeksplorasi koneksi visual ke pepohonan dan air dengan interior yang tenang.",
       siteConstraints:
         "Bentuk tapak memanjang (hook) di kawasan perumahan modern dengan kebutuhan proteksi angin kencang saat musim hujan.",
       keyChallenge:
@@ -229,7 +229,7 @@ export const projectsData: ProjectItem[] = [
     number: "03",
     slug: "a-house-in-gresik",
     title: "A House in Gresik",
-    tagline: "Adaptive architectural renovation restructuring structural efficiency and daylight penetration.",
+    tagline: "Adaptive architectural renovation exploring spatial reconfiguration and daylight.",
     location: "Concept study",
     year: "2023",
     category: "Residential Renovation",
@@ -257,7 +257,7 @@ export const projectsData: ProjectItem[] = [
       clientNeed:
         "Rumah tinggal 2 lantai warisan keluarga yang gelap, lembap, dan memiliki pembagian ruangan bersekat-sekat yang sudah tidak relevan dengan kebutuhan gaya hidup masa kini.",
       siteConstraints:
-        "Struktur kolom utama existing harus dipertahankan secara selektif demi efisiensi budget konstruksi dan legalitas batas dinding tetangga.",
+        "Kondisi kolom existing dan batas bangunan menjadi pertimbangan awal dalam eksplorasi intervensi renovasi.",
       keyChallenge:
         "Mengubah interior yang semula gelap menjadi terang benderang tanpa harus merobohkan 100% bangunan lama.",
     },
@@ -267,7 +267,7 @@ export const projectsData: ProjectItem[] = [
       spatialLogic:
         "Menghubungkan ruang tamu, ruang makan, dan taman belakang menjadi satu poros pandang linier (visual axis) yang lapang.",
       lightAndAir:
-        "Pemberian skylight kaca berinsulasi di atas void tangga membanjiri ruang keluarga tengah dengan cahaya alami 8 jam sehari tanpa lampu menyala.",
+        "Skylight di atas void tangga dieksplorasi untuk menghadirkan cahaya alami ke ruang keluarga tengah.",
     },
     spatialStrategy: {
       summary:
@@ -325,17 +325,17 @@ export const projectsData: ProjectItem[] = [
     ],
     brief: {
       clientNeed:
-        "Developer properti membutuhkan perencanaan masterplan kawasan 45 unit hunian klaster berkonsep tropis modern yang memiliki daya saing tinggi bagi segmen pembeli profesional muda.",
+        "Studi konsep masterplan hunian klaster yang mengeksplorasi karakter tropis modern, ruang terbuka, dan susunan unit.",
       siteConstraints:
         "Bentuk tanah memanjang dengan satu akses masuk utama dari jalan arteri dan kontur tanah rawa yang membutuhkan perhitungan drainase presisi.",
       keyChallenge:
-        "Mencapai densitas unit yang menguntungkan bagi developer tanpa menurunkan kualitas ruang terbuka hijau dan sirkulasi kendaraan.",
+        "Menyeimbangkan susunan unit, kualitas ruang terbuka hijau, dan sirkulasi kendaraan dalam konsep kawasan.",
     },
     designResponse: {
       concept:
         "Green Spine Pedestrian Axis — Menempatkan ruang hijau terpusat di tengah klaster sebagai paru-paru lingkungan dan sarana interaksi komunitas warga.",
       spatialLogic:
-        "Dua tipologi unit (Compact 90 m² dan Premier 160 m²) yang menggunakan modul struktur 3.5 meter terstandarisasi untuk menekan biaya konstruksi massal.",
+        "Eksplorasi dua tipologi unit dengan pendekatan modul ruang yang konsisten untuk membangun karakter kawasan.",
       lightAndAir:
         "Setiap unit dirancang memiliki courtyard belakang selebar 2 meter yang terhubung secara visual ke ruang keluarga.",
     },
@@ -395,7 +395,7 @@ export const projectsData: ProjectItem[] = [
     ],
     brief: {
       clientNeed:
-        "Perusahaan konsultan membutuhkan kantor representatif berkarakter tenang, berdisiplin visual tinggi, dan mendukung kolaborasi intensif sekaligus peredaman suara meeting.",
+        "Studi konsep ruang kerja berkarakter tenang yang mengeksplorasi area fokus, kolaborasi, dan ruang diskusi.",
       siteConstraints:
         "Unit lantai gedung perkantoran dengan ketinggian plafon terbatas (2.8 meter slab-to-slab) dan jalur ducting AC eksisting yang rumit.",
       keyChallenge:
@@ -463,9 +463,9 @@ export const projectsData: ProjectItem[] = [
       clientNeed:
         "Hunian istirahat akhir pekan yang memaksimalkan pemandangan lembah dan iklim sejuk kota Malang, dengan ruang luar yang mengundang untuk berkumpul santai.",
       siteConstraints:
-        "Kemiringan tanah lereng mencapai 22 derajat dengan risiko pergerakan tanah permukaan saat musim hujan lebat.",
+        "Tapak berkontur menjadi konteks awal untuk mengeksplorasi hubungan massa bangunan, teras, dan lanskap.",
       keyChallenge:
-        "Membangun struktur penahan tanah yang efisien dan aman tanpa membuat rumah terasa seperti benteng beton tertutup.",
+        "Menyusun massa bangunan berundak yang tetap membuka hubungan ruang dengan lanskap.",
     },
     designResponse: {
       concept:

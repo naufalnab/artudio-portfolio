@@ -16,8 +16,9 @@ export default function ProjectFilter({
   counts = {},
 }: ProjectFilterProps) {
   return (
-    <div className="w-full overflow-x-auto no-scrollbar py-2 border-b border-[#D8D5CC]">
-      <div className="flex items-center space-x-2 sm:space-x-4 min-w-max">
+    <div className="relative border-b border-[#D8D5CC]">
+      <div className="w-full overflow-x-auto py-2 pr-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex items-center space-x-2 sm:space-x-4 min-w-max whitespace-nowrap">
         {categories.map((cat) => {
           const isActive = activeCategory === cat;
           const count = counts[cat];
@@ -44,7 +45,9 @@ export default function ProjectFilter({
             </button>
           );
         })}
+        </div>
       </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-r from-transparent to-[#F4F2ED] sm:hidden" />
     </div>
   );
 }

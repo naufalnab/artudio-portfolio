@@ -79,7 +79,7 @@ export default function ContactPage() {
                 WhatsApp Consultation
               </h2>
               <p className="text-xs sm:text-sm text-[#50504C] leading-relaxed">
-                Hubungi nomor konsultasi resmi tim arsitek ARTUDIO untuk mengajukan pertanyaan langsung atau jadwal temu diskusi.
+                Hubungi ARTUDIO untuk mengajukan pertanyaan langsung atau menjadwalkan diskusi mengenai proyek Anda.
               </p>
               <div className="pt-2 font-mono text-xs text-[#181817] font-medium">
                 {siteConfig.contact.displayWhatsapp}
