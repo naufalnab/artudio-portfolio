@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #F4F2ED;
+  --color-warm-white: #FAF9F6;
+  --color-ink-primary: #181817;
+  --color-ink-secondary: #50504C;
+  --color-ink-muted: #8A8880;
+  --color-border-subtle: #D8D5CC;
+  --color-ink-dark: #161714;
+  --color-accent-bronze: #8B7654;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: #F4F2ED;
+  --foreground: #181817;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #181817;
+  color: #FAF9F6;
+}
+
+/* Editorial typography utilities */
+.font-editorial {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Subtle architectural divider line */
+.architectural-line {
+  height: 1px;
+  background-color: #D8D5CC;
+  width: 100%;
+}
+
+/* Clean custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F2ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D5CC;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A8880;
+}
