@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
+import { siteConfig } from "@/lib/siteConfig";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -27,16 +28,15 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "ARTUDIO Interior & Architecture — Indonesia",
+    default: "ARTUDIO — Interior, Architecture & Design Studio",
     template: "%s | ARTUDIO Interior & Architecture",
   },
   description:
-    "Studio arsitektur dan interior yang membantu merancang hunian, renovasi, interior, dan pengembangan properti melalui proses desain yang matang.",
+    "ARTUDIO adalah studio perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual yang dipimpin oleh Erfan Radistya, ST.",
   keywords: [
     "ARTUDIO",
-    "Arsitek Surabaya",
-    "Arsitek Sidoarjo",
-    "Interior Design Indonesia",
+    "Arsitek Jakarta Selatan",
+    "Interior Design Jakarta Selatan",
     "Arsitektur Kontemporer",
     "Renovasi Rumah",
     "Developer Planning",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ARTUDIO Interior & Architecture",
     description:
-      "Architecture shaped around the way you live. Desain arsitektur dan interior terukur dari konsep hingga implementasi.",
+    "Architecture, interior, renovation, developer planning, dan identitas visual oleh ARTUDIO di Jakarta Selatan.",
     siteName: "ARTUDIO Interior & Architecture",
     locale: "id_ID",
     type: "website",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ARTUDIO Interior & Architecture",
     description:
-      "Studio arsitektur dan interior yang membantu merancang hunian, renovasi, dan interior melalui proses terukur.",
+      "ARTUDIO — Interior, Architecture & Design Studio di Jakarta Selatan.",
   },
   robots: {
     index: true,
@@ -72,17 +72,23 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "ARTUDIO Interior & Architecture",
+    name: siteConfig.name,
     alternateName: "ARTUDIO",
     description:
-      "Studio arsitektur dan interior yang membantu merancang hunian, renovasi, interior, dan pengembangan properti melalui proses desain yang matang.",
+      "Studio perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual.",
     founder: {
       "@type": "Person",
       name: "Erfan Radistya, ST",
       jobTitle: "Founder / Principal",
     },
-    areaServed: ["Surabaya", "Sidoarjo", "Jawa Timur", "Indonesia"],
-    priceRange: "$$$$",
+    telephone: siteConfig.contact.displayWhatsapp,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address.line1,
+      addressLocality: `${siteConfig.address.district}, ${siteConfig.address.city}`,
+      addressRegion: siteConfig.address.province,
+      addressCountry: "ID",
+    },
   };
 
   return (

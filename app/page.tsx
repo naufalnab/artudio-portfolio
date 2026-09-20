@@ -4,24 +4,25 @@ import Image from "next/image";
 import { projectsData } from "@/data/projects";
 import { servicesData } from "@/data/services";
 import { processSteps, philosophyPrinciples } from "@/data/process";
+import { siteConfig } from "@/lib/siteConfig";
 import ProjectCard from "@/components/ProjectCard";
-import { ArrowUpRight, ArrowRight, ShieldCheck, Compass, Sparkles } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Sparkles } from "lucide-react";
 
 export default function HomePage() {
   const selectedProjects = projectsData.slice(0, 6);
-  const featuredCase = projectsData[0]; // Casa Sidoarjo
+  const featuredCase = projectsData[0]; // Casa Courtyard
 
   return (
     <div className="w-full flex flex-col bg-[#F4F2ED]">
       {/* 1. HERO SECTION (88-95vh, Fullscreen Architectural Statement) */}
       <section className="relative min-h-[92vh] flex items-end pb-16 sm:pb-24 pt-32 px-6 sm:px-8 lg:px-12 overflow-hidden bg-[#181817]">
-        {/* Architectural Hero Image (fetchpriority="high", priority=true for LCP optimization) */}
+        {/* Sole homepage LCP preload. */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85"
+            src="/images/artudio/photo-1600585154340-be6161a56a0c.webp"
             alt="ARTUDIO Architectural Sanctuary"
             fill
-            priority
+            preload
             className="object-cover object-center brightness-[0.72] contrast-[1.05]"
             sizes="100vw"
           />
@@ -45,7 +46,7 @@ export default function HomePage() {
 
             {/* Subtitle in Indonesian */}
             <p className="text-base sm:text-lg text-[#D8D5CC] font-normal leading-relaxed max-w-2xl">
-              ARTUDIO membantu mewujudkan hunian, interior, renovasi, dan pengembangan properti melalui proses desain yang terukur dari konsep hingga implementasi.
+              {siteConfig.subtitle} ARTUDIO mendampingi pemilik rumah, bisnis, dan pengembang menerjemahkan kebutuhan menjadi perencanaan yang terarah — dari ruang fisik hingga identitas visual.
             </p>
 
             {/* Dual CTAs */}
@@ -69,10 +70,10 @@ export default function HomePage() {
 
           {/* Bottom Metadata Bar */}
           <div className="mt-14 pt-6 border-t border-white/20 grid grid-cols-2 sm:grid-cols-4 gap-4 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-[#D8D5CC]/80 font-mono">
-            <div>01 • Architecture</div>
-            <div>02 • Interior Design</div>
-            <div>03 • Renovation</div>
-            <div>04 • Developer Planning</div>
+            <div><span className="block font-editorial text-2xl text-white normal-case tracking-normal">20+</span>Tahun Pengalaman</div>
+            <div>Architecture<br />Interior &amp; Building Design</div>
+            <div>Developer<br />Planning &amp; Development</div>
+            <div>Brand<br />Identity &amp; Visual Communication</div>
           </div>
         </div>
       </section>
@@ -91,7 +92,7 @@ export default function HomePage() {
 
           <div className="lg:col-span-4 space-y-6 lg:pl-6 border-l-0 lg:border-l border-[#D8D5CC]">
             <p className="text-sm sm:text-base text-[#50504C] leading-relaxed">
-              ARTUDIO bekerja melalui pendekatan yang menggabungkan fungsi, konteks iklim, kebutuhan personal klien, detail konstruksi, dan karakter visual yang tenang.
+              ARTUDIO bekerja melalui pendekatan yang menggabungkan fungsi, konteks, kebutuhan klien, karakter visual, dan kesiapan implementasi.
             </p>
             <Link
               href="/studio"
@@ -129,7 +130,7 @@ export default function HomePage() {
           {/* Row 1: Asymmetric split (70% wide left, 30% compact right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-8">
-              <ProjectCard project={selectedProjects[0]} layoutStyle="wide" priority />
+              <ProjectCard project={selectedProjects[0]} layoutStyle="wide" imageSizes="(max-width: 1024px) 100vw, 66vw" />
             </div>
             <div className="lg:col-span-4 lg:pt-16">
               <ProjectCard project={selectedProjects[1]} layoutStyle="compact" />
@@ -138,7 +139,7 @@ export default function HomePage() {
 
           {/* Row 2: Full width dramatic showcase */}
           <div className="w-full">
-            <ProjectCard project={selectedProjects[2]} layoutStyle="wide" />
+            <ProjectCard project={selectedProjects[2]} layoutStyle="wide" imageSizes="(max-width: 1024px) 100vw, 90vw" />
           </div>
 
           {/* Row 3: 50 / 50 Balanced split */}
@@ -156,7 +157,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="lg:col-span-9">
-              <ProjectCard project={selectedProjects[5]} layoutStyle="wide" />
+              <ProjectCard project={selectedProjects[5]} layoutStyle="wide" imageSizes="(max-width: 1024px) 100vw, 75vw" />
             </div>
           </div>
         </div>
@@ -225,7 +226,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. FEATURED CASE STUDY SPOTLIGHT */}
+      {/* 5. DEVELOPER PLANNING CONVERSION */}
+      <section className="px-6 sm:px-8 lg:px-12 py-16 sm:py-24 bg-[#F4F2ED]">
+        <div className="max-w-7xl mx-auto border-y border-[#D8D5CC] py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="lg:col-span-8">
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#8A8880] font-medium">Developer Planning</span>
+            <h2 className="font-editorial text-4xl sm:text-5xl text-[#181817] font-normal mt-3">Have land, but not sure what to build?</h2>
+            <p className="max-w-2xl text-sm sm:text-base text-[#50504C] leading-relaxed mt-4">ARTUDIO dapat membantu memulai dari pembacaan kebutuhan, potensi tapak, konsep pengembangan, hingga visualisasi awal sebelum keputusan pembangunan dibuat.</p>
+          </div>
+          <div className="lg:col-span-4 lg:text-right">
+            <Link href="/start-project?service=Developer%20Planning" className="inline-flex items-center px-6 py-3.5 bg-[#181817] text-white text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#333330] transition-colors">
+              Diskusikan Potensi Lahan <ArrowUpRight className="ml-2 w-3.5 h-3.5 text-[#8B7654]" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. FEATURED CASE STUDY SPOTLIGHT */}
       <section className="py-24 sm:py-32 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
         <div className="bg-[#181817] text-[#FAF9F6] p-8 sm:p-14 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
@@ -278,7 +295,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. DESIGN PHILOSOPHY ("Design is a process, not an ornament.") */}
+      {/* 7. BUILT ENVIRONMENT + BRAND */}
+      <section className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-[#FAF9F6] border-y border-[#D8D5CC]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-7">
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#8A8880] font-medium">Built Environment + Visual Identity</span>
+            <h2 className="font-editorial text-4xl sm:text-5xl text-[#181817] font-normal mt-3">A space and a brand should speak the same language.</h2>
+            <p className="text-sm sm:text-base text-[#50504C] leading-relaxed mt-5 max-w-2xl">Selain ruang fisik, ARTUDIO membantu bisnis membangun identitas visual melalui logo, brand identity, graphic design, dan website. Layanan dapat dikombinasikan sesuai kebutuhan.</p>
+          </div>
+          <div className="lg:col-span-5 grid grid-cols-1 gap-px bg-[#D8D5CC] border border-[#D8D5CC] self-start">
+            {["Cafe & Restaurant — Interior + Identity + Graphic Communication", "Property Development — Planning + Visualization + Brand Identity", "Retail / Commercial — Interior + Signage + Visual Identity"].map((item) => <p key={item} className="bg-[#FAF9F6] p-5 text-sm text-[#50504C]">{item}</p>)}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. DESIGN PHILOSOPHY ("Design is a process, not an ornament.") */}
       <section className="py-24 sm:py-32 px-6 sm:px-8 lg:px-12 bg-[#F4F2ED]">
         <div className="max-w-7xl mx-auto w-full">
           <div className="max-w-3xl mb-16">

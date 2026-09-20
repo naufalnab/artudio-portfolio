@@ -1,43 +1,37 @@
 export interface SiteConfig {
   name: string;
   shortName: string;
+  descriptor: string;
   tagline: string;
   subtitle: string;
-  founder: {
-    name: string;
-    title: string;
-    status: string;
-  };
-  contact: {
-    whatsappNumber: string;
-    displayWhatsapp: string;
-    email: string;
-    locationNote: string;
-  };
-  navigation: {
-    label: string;
-    href: string;
-  }[];
+  principal: { name: string; role: string };
+  experience: { display: string; label: string };
+  contact: { whatsappNumber: string; displayWhatsapp: string; whatsappUrl: string };
+  address: { line1: string; district: string; city: string; province: string };
+  navigation: { label: string; href: string }[];
 }
 
+const whatsappNumber = "6281316670757";
+const defaultMessage = "Assalamu'alaikum, saya ingin berdiskusi mengenai kebutuhan proyek bersama ARTUDIO.";
+
 export const siteConfig: SiteConfig = {
-  name: "ARTUDIO Interior & Architecture",
+  name: "ARTUDIO",
   shortName: "ARTUDIO",
+  descriptor: "Interior & Architecture",
   tagline: "Architecture shaped around the way you live.",
-  subtitle:
-    "ARTUDIO membantu mewujudkan hunian, interior, renovasi, dan pengembangan properti melalui proses desain yang terukur dari konsep hingga implementasi.",
-  founder: {
-    name: "Erfan Radistya, ST",
-    title: "Founder / Principal",
-    status: "Professional biography to be added after verification.",
-  },
+  subtitle: "Lebih dari dua dekade pengalaman dalam perencanaan arsitektur, interior, pengembangan properti, dan identitas visual.",
+  principal: { name: "Erfan Radistya, ST", role: "Founder / Principal" },
+  experience: { display: "20+", label: "Tahun Pengalaman" },
   contact: {
-    // Configurable via env variable NEXT_PUBLIC_WHATSAPP_NUMBER
-    // Indonesian format without '+' or '0' prefix (e.g. 62812...)
-    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "6281234567890",
-    displayWhatsapp: "+62 812-3456-7890 (Placeholder)",
-    email: "consultation@artudio.id",
-    locationNote: "Surabaya & Sidoarjo, Jawa Timur (Service coverage throughout Indonesia)",
+    whatsappNumber,
+    displayWhatsapp: "0813 166 70757",
+    whatsappUrl: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`,
+  },
+  address: {
+    line1: "Jl. Timbul IV H, No. 30C",
+    district: "Cipedak, Jagakarsa",
+    city: "Jakarta Selatan",
+    province: "DKI Jakarta",
   },
   navigation: [
     { label: "Projects", href: "/projects" },
@@ -66,36 +60,22 @@ export interface ProjectBriefData {
 
 export function generateWhatsAppMessage(brief: ProjectBriefData): string {
   const lines = [
-    `Halo ARTUDIO, saya ingin berkonsultasi mengenai proyek saya.`,
-    ``,
-    `*RINGKASAN PROJECT BRIEF*`,
-    `• *Nama:* ${brief.fullName || "-"}`,
-    `• *Jenis Proyek:* ${brief.projectType || "-"}`,
-    `• *Lokasi:* ${brief.city || "-"}${brief.address ? ` (${brief.address})` : ""}`,
-    `• *Luas Lahan:* ${brief.landArea ? `${brief.landArea} m²` : "-"}`,
-    `• *Luas Bangunan:* ${brief.buildingArea ? `${brief.buildingArea} m²` : "-"}`,
-    `• *Tahap Proyek:* ${brief.projectStage || "-"}`,
-    `• *Estimasi Budget:* ${brief.budgetRange || "-"}`,
-    `• *Rencana Timeline:* ${brief.timeline || "-"}`,
-    `• *Preferensi Karakter/Style:* ${brief.designDirection || "-"}`,
-    ``,
-    `*Catatan Tambahan:*`,
-    `${brief.description ? brief.description : "Saya ingin mendiskusikan konsep dan alur kerja lebih lanjut bersama tim ARTUDIO."}`,
-    ``,
-    `Saya mendapatkan kontak ini melalui website resmi ARTUDIO. Terima kasih.`,
+    "Assalamu'alaikum ARTUDIO,",
+    "saya ingin berdiskusi mengenai proyek:",
+    "",
+    `Jenis: ${brief.projectType || "-"}`,
+    `Lokasi: ${brief.city || "-"}${brief.address ? ` (${brief.address})` : ""}`,
+    `Luas lahan: ${brief.landArea ? `${brief.landArea} m²` : "-"}`,
+    `Luas bangunan: ${brief.buildingArea ? `${brief.buildingArea} m²` : "-"}`,
+    `Tahap: ${brief.projectStage || "-"}`,
+    `Timeline: ${brief.timeline || "-"}`,
+    `Kebutuhan: ${brief.description || "-"}`,
   ];
-
   return encodeURIComponent(lines.join("\n"));
 }
 
 export function getWhatsAppLink(brief?: ProjectBriefData): string {
-  const number = siteConfig.contact.whatsappNumber;
-  if (!brief) {
-    const defaultText = encodeURIComponent(
-      "Halo ARTUDIO, saya ingin berdiskusi mengenai rencana proyek arsitektur/interior bersama tim Anda."
-    );
-    return `https://wa.me/${number}?text=${defaultText}`;
-  }
-  const text = generateWhatsAppMessage(brief);
-  return `https://wa.me/${number}?text=${text}`;
+  return brief
+    ? `https://wa.me/${whatsappNumber}?text=${generateWhatsAppMessage(brief)}`
+    : siteConfig.contact.whatsappUrl;
 }

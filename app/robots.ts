@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/client/"],
     },
-    sitemap: "https://artudio.id/sitemap.xml",
+    sitemap: "https://artudio-portfolio.vercel.app/sitemap.xml",
   };
 }

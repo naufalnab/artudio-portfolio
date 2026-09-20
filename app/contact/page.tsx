@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig, getWhatsAppLink } from "@/lib/siteConfig";
-import { ArrowUpRight, MessageCircle, Mail, MapPin, ShieldAlert, HelpCircle } from "lucide-react";
+import { ArrowUpRight, MessageCircle, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact & Consultation",
   description:
-    "Hubungi ARTUDIO Interior & Architecture untuk konsultasi proyek hunian, renovasi, dan perancangan kawasan properti.",
+    "Hubungi ARTUDIO Interior & Architecture di Jakarta Selatan untuk konsultasi arsitektur, interior, renovasi, developer planning, dan identitas visual.",
 };
 
 export default function ContactPage() {
@@ -19,8 +19,8 @@ export default function ContactPage() {
       a: "Tidak perlu. Sebagian besar klien datang hanya membawa batas ukuran tanah atau keinginan suasana hunian. ARTUDIO akan membantu memetakan kebutuhan ruang dari nol.",
     },
     {
-      q: "Bagaimana jika proyek saya berada di luar Surabaya / Sidoarjo?",
-      a: "ARTUDIO melayani proyek arsitektur dan interior di seluruh Indonesia. Tahap awal dan asistensi desain dapat dilakukan secara berkala melalui online meeting terstruktur, dengan kunjungan tapak terjadwal.",
+      q: "Bagaimana pengaturan konsultasi dan lokasi proyek?",
+      a: "ARTUDIO berbasis di Jakarta Selatan. Lokasi proyek dan pengaturan konsultasi dapat didiskusikan langsung sesuai kebutuhan.",
     },
     {
       q: "Apakah renovasi rumah dengan budget terbatas bisa dikerjakan?",
@@ -44,8 +44,8 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* 3 Main Contact Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {/* Verified contact channels */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {/* Card 1: Project Brief Builder */}
           <div className="p-8 bg-[#FAF9F6] border border-[#D8D5CC] flex flex-col justify-between space-y-6">
             <div className="space-y-3">
@@ -97,31 +97,6 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Card 3: Email Inquiry */}
-          <div className="p-8 bg-[#FAF9F6] border border-[#D8D5CC] flex flex-col justify-between space-y-6">
-            <div className="space-y-3">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#8A8880] font-medium block">
-                Official Correspondence
-              </span>
-              <h2 className="font-editorial text-2xl text-[#181817]">
-                Email Correspondence
-              </h2>
-              <p className="text-xs sm:text-sm text-[#50504C] leading-relaxed">
-                Kirimkan berkas proposal kawasan, dokumen masterplan, atau undangan tender desain komersial melalui surat elektronik.
-              </p>
-              <div className="pt-2 font-mono text-xs text-[#181817] font-medium">
-                {siteConfig.contact.email}
-              </div>
-            </div>
-
-            <a
-              href={`mailto:${siteConfig.contact.email}`}
-              className="w-full text-center py-3.5 border border-[#D8D5CC] bg-white text-[#50504C] text-xs uppercase tracking-[0.16em] font-medium hover:bg-[#F4F2ED] transition-colors inline-flex items-center justify-center"
-            >
-              <Mail className="w-3.5 h-3.5 mr-1.5 text-[#8A8880]" />
-              <span>Kirim Email</span>
-            </a>
-          </div>
         </div>
 
         {/* Location & Safety Transparency Note */}
@@ -130,13 +105,16 @@ export default function ContactPage() {
             <MapPin className="w-5 h-5 text-[#8B7654] shrink-0 mt-0.5" />
             <div className="space-y-1">
               <h3 className="font-editorial text-xl text-[#181817]">
-                Cakupan Wilayah Layanan Studio
+                Studio ARTUDIO
               </h3>
               <p className="text-xs sm:text-sm text-[#50504C] leading-relaxed">
-                {siteConfig.contact.locationNote}
+                ARTUDIO — Interior &amp; Architecture<br />
+                {siteConfig.address.line1}<br />
+                {siteConfig.address.district}<br />
+                {siteConfig.address.city}, {siteConfig.address.province}
               </p>
               <p className="text-[11px] text-[#8A8880] pt-1">
-                * Kunjungan fisik studio diatur melalui janji temu konsultasi terlebih dahulu. Alamat fisik detail akan dikonfirmasi secara resmi setelah verifikasi jadwal meeting.
+                Diskusi lokasi proyek dan pengaturan konsultasi dapat dilakukan langsung melalui WhatsApp.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ interface ArchitecturalDrawingProps {
 export default function ArchitecturalDrawing({
   title = "Ground Floor Architectural Plan",
   projectNumber = "01",
-  projectName = "Casa Sidoarjo",
+  projectName = "Casa Courtyard",
 }: ArchitecturalDrawingProps) {
   return (
     <div className="w-full bg-[#FAF9F6] border border-[#D8D5CC] p-4 sm:p-8 lg:p-10 font-mono text-[#181817]">

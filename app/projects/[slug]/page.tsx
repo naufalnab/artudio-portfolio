@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectsData, getProjectBySlug } from "@/data/projects";
 import ArchitecturalDrawing from "@/components/ArchitecturalDrawing";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Compass, Layers, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 
 interface ProjectPageProps {
@@ -55,7 +55,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <span>Back to Projects</span>
           </Link>
           <span className="font-mono text-xs text-[#8A8880]">
-            CASE STUDY #{project.number}
+            CONCEPT STUDY #{project.number}
           </span>
         </div>
       </div>
@@ -104,9 +104,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="relative aspect-[16/10] sm:aspect-[21/10] w-full overflow-hidden bg-[#E5E2D9] shadow-sm">
           <Image
             src={project.heroImage}
-            alt={project.title}
+            alt={`${project.title} — visual konsep ${project.category.toLowerCase()}`}
             fill
-            priority
+            preload
             sizes="100vw"
             className="object-cover object-center"
           />

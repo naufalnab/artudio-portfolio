@@ -25,10 +25,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
   useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
 
   const isDarkHero = pathname === "/"; // On homepage hero, we have architectural imagery
 
@@ -78,6 +78,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
                   className={`text-[13px] tracking-[0.14em] uppercase font-medium transition-colors duration-200 relative py-1 ${
                     scrolled
                       ? isActive
@@ -150,6 +151,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
                   className={`text-2xl font-editorial tracking-wide transition-colors ${
                     isActive ? "text-[#181817] font-semibold" : "text-[#50504C] hover:text-[#181817]"
                   }`}
@@ -168,7 +170,7 @@ export default function Navbar() {
               Start a Project Brief
             </Link>
             <p className="text-center text-xs text-[#8A8880] tracking-wider">
-              Surabaya & Sidoarjo • East Java
+              Cipedak, Jagakarsa • Jakarta Selatan
             </p>
           </div>
         </div>

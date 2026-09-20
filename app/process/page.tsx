@@ -11,15 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function ProcessPage() {
-  const processDurations = [
-    "1 – 2 Minggu",
-    "1 – 2 Minggu",
-    "3 – 4 Minggu",
-    "3 – 5 Minggu",
-    "3 – 4 Minggu",
-    "Sesuai Masa Konstruksi",
-  ];
-
   return (
     <div className="w-full bg-[#F4F2ED] pt-36 pb-28 px-6 sm:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto w-full">
@@ -32,13 +23,13 @@ export default function ProcessPage() {
             From First Conversation to Built Space
           </h1>
           <p className="text-sm sm:text-base text-[#50504C] mt-3 leading-relaxed">
-            Membangun properti adalah keputusan besar. Alur perancangan 6 tahap kami memastikan Anda selalu memiliki kendali penuh atas keputusan bentuk, fungsi, dan alokasi biaya.
+            Membangun properti adalah keputusan besar. Enam tahap ini membantu menjelaskan bagaimana percakapan awal dapat berkembang menjadi arah desain dan dukungan proyek.
           </p>
         </div>
 
         {/* Vertical Stepper Process */}
         <div className="space-y-12">
-          {processSteps.map((step, idx) => (
+          {processSteps.map((step) => (
             <div
               key={step.number}
               className="p-8 sm:p-12 bg-[#FAF9F6] border border-[#D8D5CC] grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative"
@@ -52,7 +43,7 @@ export default function ProcessPage() {
                   <span className="w-8 h-[1px] bg-[#D8D5CC]" />
                   <span className="font-mono text-xs text-[#8A8880] flex items-center">
                     <Clock className="w-3 h-3 mr-1" />
-                    ± {processDurations[idx]}
+                    Durasi menyesuaikan scope
                   </span>
                 </div>
 
@@ -95,7 +86,7 @@ export default function ProcessPage() {
         {/* Disclaimer Note */}
         <div className="mt-8 p-6 bg-[#FAF9F6] border border-[#D8D5CC] text-xs text-[#8A8880] text-center leading-relaxed">
           <p className="font-medium text-[#50504C] mb-1">Catatan Penting Lingkup Layanan:</p>
-          Durasi dan pembagian tahapan dapat disesuaikan berdasarkan skala proyek, kesiapan lahan, serta kebutuhan perizinan setempat. ARTUDIO memprioritaskan komunikasi terbuka dan koordinasi gambar yang presisi.
+          Durasi dan keluaran setiap tahap menyesuaikan jenis, skala, dan ruang lingkup proyek. Kebutuhan perizinan maupun koordinasi dengan pihak lain dibahas sesuai konteks proyek.
         </div>
 
         {/* CTA Banner */}

@@ -46,8 +46,9 @@ export default function ProjectsPage() {
             Projects Portfolio
           </h1>
           <p className="text-sm sm:text-base text-[#50504C] mt-3 leading-relaxed">
-            Katalog karya arsitektur, interior, renovasi, dan perancangan kawasan oleh ARTUDIO. Setiap desain dirancang dengan disiplin struktural dan kepekaan terhadap iklim mikro.
+            Studi konsep untuk memperlihatkan pendekatan ARTUDIO pada arsitektur, interior, renovasi, dan perencanaan pengembangan.
           </p>
+          <p className="text-xs text-[#8A8880] mt-3">Sebagian visual dan studi proyek pada versi ini merupakan materi konsep untuk demonstrasi presentasi.</p>
         </div>
 
         {/* Filter Navigation */}
@@ -62,12 +63,11 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {filteredProjects.map((project, idx) => (
+          {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
               layoutStyle="standard"
-              priority={idx < 3}
             />
           ))}
         </div>

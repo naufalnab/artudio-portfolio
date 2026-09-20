@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { siteConfig, generateWhatsAppMessage, ProjectBriefData } from "@/lib/siteConfig";
 import {
   ArrowRight,
@@ -9,7 +11,6 @@ import {
   Building2,
   Home,
   Hammer,
-  Store,
   Layers,
   Sparkles,
   UploadCloud,
@@ -23,13 +24,11 @@ interface BriefBuilderProps {
 }
 
 const PROJECT_TYPES = [
-  { id: "Residential Architecture", label: "Residential Architecture", desc: "Desain rumah tinggal baru dari nol", icon: Home },
+  { id: "Architecture", label: "Architecture", desc: "Perencanaan bangunan dan ruang dari kebutuhan awal", icon: Home },
   { id: "Interior Design", label: "Interior Design", desc: "Perancangan interior, material & custom furniture", icon: Sparkles },
   { id: "Renovation", label: "Renovation", desc: "Transformasi & peremajaan bangunan eksisting", icon: Hammer },
-  { id: "Commercial & Office", label: "Commercial & Office", desc: "Kantor, kafe, restoran, retail & showroom", icon: Store },
   { id: "Developer Planning", label: "Developer Planning", desc: "Masterplan kawasan, klaster & prototipe unit", icon: Building2 },
-  { id: "Brand Identity", label: "Brand Identity", desc: "Kesinambungan identitas visual & karakter ruang", icon: Layers },
-  { id: "Other", label: "Other Project", desc: "Kebutuhan desain khusus lainnya", icon: Sparkles },
+  { id: "Brand Identity & Creative", label: "Brand Identity & Creative", desc: "Logo, visual identity, graphic design, dan website", icon: Layers },
 ];
 
 const PROJECT_STAGES = [
@@ -63,49 +62,51 @@ const DESIGN_DIRECTIONS = [
     id: "Contemporary",
     title: "Contemporary",
     desc: "Garis bersih, geometri terukur, pencahayaan dramatis",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1600585154340-be6161a56a0c.webp",
   },
   {
     id: "Modern Tropical",
     title: "Modern Tropical",
     desc: "Teritisan lebar, inner courtyard, ventilasi silang alami",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1600596542815-ffad4c1539a9.webp",
   },
   {
     id: "Minimal",
     title: "Minimal",
     desc: "Reduksi elemen berlebih, ketenangan monolitik, kemurnian ruang",
-    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1600585152220-90363fe7e115.webp",
   },
   {
     id: "Warm Modern",
     title: "Warm Modern",
     desc: "Sentuhan kayu hangat, plester kapur bertekstur, pencahayaan lembut",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1618221195710-dd6b41faaea6.webp",
   },
   {
     id: "Industrial Subtle",
     title: "Industrial Subtle",
     desc: "Baja ekspos, semen poles, bukaan kaca berprofil hitam arsitektural",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1497366216548-37526070297c.webp",
   },
   {
     id: "Open to Recommendation",
     title: "Rekomendasi Arsitek",
     desc: "Biarkan tim ARTUDIO menganalisis karakter yang paling sesuai untuk tapak Anda",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
+    image: "/images/artudio/photo-1600607687939-ce8a6c25118c.webp",
   },
 ];
 
 export default function BriefBuilder({ initialProjectType }: BriefBuilderProps) {
+  const searchParams = useSearchParams();
+  const requestedService = searchParams.get("service");
   const [currentStep, setCurrentStep] = useState(1);
   const [isSummaryView, setIsSummaryView] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
 
   // Form State
   const [formData, setFormData] = useState<ProjectBriefData>({
-    projectType: initialProjectType || "Residential Architecture",
-    city: "Surabaya",
+    projectType: requestedService || initialProjectType || "Architecture",
+    city: "",
     address: "",
     landArea: "",
     buildingArea: "",
@@ -359,7 +360,7 @@ export default function BriefBuilder({ initialProjectType }: BriefBuilderProps) 
                     type="text"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    placeholder="Contoh: Sidoarjo, Surabaya Barat, Malang, Gresik"
+                    placeholder="Contoh: Jakarta Selatan, Bandung, atau kota proyek"
                     className="w-full px-4 py-3 bg-white border border-[#D8D5CC] text-sm text-[#181817] focus:outline-none focus:border-[#181817]"
                   />
                 </div>
@@ -574,11 +575,12 @@ export default function BriefBuilder({ initialProjectType }: BriefBuilderProps) 
                       }`}
                     >
                       <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#E5E2D9]">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src={dir.image}
                           alt={dir.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         {isSelected && (
                           <div className="absolute top-2 right-2 bg-[#181817] text-white p-1 rounded-full">

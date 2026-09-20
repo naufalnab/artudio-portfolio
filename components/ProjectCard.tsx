@@ -7,13 +7,15 @@ import { ArrowUpRight } from "lucide-react";
 interface ProjectCardProps {
   project: ProjectItem;
   layoutStyle?: "wide" | "standard" | "compact";
-  priority?: boolean;
+  preload?: boolean;
+  imageSizes?: string;
 }
 
 export default function ProjectCard({
   project,
   layoutStyle = "standard",
-  priority = false,
+  preload = false,
+  imageSizes,
 }: ProjectCardProps) {
   const isWide = layoutStyle === "wide";
 
@@ -32,14 +34,16 @@ export default function ProjectCard({
         >
           <Image
             src={project.thumbnail}
-            alt={project.title}
+            alt={`${project.title} — visual konsep ${project.category.toLowerCase()}`}
             fill
-            priority={priority}
-            sizes={
+            preload={preload}
+            sizes={imageSizes ?? (
               isWide
-                ? "(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px"
-                : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
-            }
+                ? "(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 75vw"
+                : layoutStyle === "compact"
+                ? "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            )}
             className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
           {/* Subtle architectural overlay */}

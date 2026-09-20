@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { philosophyPrinciples } from "@/data/process";
-import { ArrowUpRight, CheckCircle2, Shield } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,9 +16,9 @@ export default function StudioPage() {
   const expertise = [
     { title: "Residential Architecture", desc: "Perancangan hunian tropis kontemporer, villa privat & townhouse." },
     { title: "Interior Architecture", desc: "Integrasi tata ruang, lighting, tekstur material & custom furniture." },
-    { title: "Adaptive Renovation", desc: "Revitalisasi bangunan eksisting dengan efisiensi struktur & daylighting." },
-    { title: "Developer Masterplanning", desc: "Pengembangan klaster properti terpadu, prototipe unit & green spine." },
-    { title: "Brand Identity Integration", desc: "Penyelarasan identitas grafis, signage, dan karakter ruang komersial." },
+    { title: "Renovation", desc: "Membaca kondisi existing lalu menyusun arah fungsi, ruang, dan visual baru." },
+    { title: "Developer Planning", desc: "Studi awal tapak, konsep pengembangan, tipologi, dan visualisasi." },
+    { title: "Brand Identity & Creative", desc: "Logo, identitas visual, komunikasi grafis, signage, dan website design." },
   ];
 
   return (
@@ -41,10 +41,9 @@ export default function StudioPage() {
         <div className="mb-24">
           <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden bg-[#E5E2D9]">
             <Image
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2200&q=85"
+              src="/images/artudio/photo-1600585154526-990dced4db0d.webp"
               alt="ARTUDIO Architectural Material & Spatial Atmosphere"
               fill
-              priority
               sizes="100vw"
               className="object-cover object-center"
             />
@@ -63,30 +62,22 @@ export default function StudioPage() {
                 Studio Leadership
               </span>
               <h2 className="font-editorial text-3xl sm:text-4xl text-[#181817] font-normal">
-                {siteConfig.founder.name}
+                {siteConfig.principal.name}
               </h2>
               <div className="font-mono text-xs uppercase tracking-wider text-[#50504C]">
-                {siteConfig.founder.title}
+                {siteConfig.principal.role}
               </div>
-
-              {/* Verified Notice Placeholder */}
-              <div className="p-4 bg-[#F4F2ED] border border-[#D8D5CC] text-xs text-[#8A8880] space-y-1">
-                <div className="flex items-center text-[#50504C] font-medium">
-                  <Shield className="w-3.5 h-3.5 mr-1.5 text-[#8B7654]" />
-                  <span>Official Profile Verification</span>
-                </div>
-                <p className="italic">
-                  &ldquo;{siteConfig.founder.status}&rdquo;
-                </p>
-              </div>
+              <p className="font-editorial text-xl text-[#50504C] leading-snug">
+                {siteConfig.experience.display} {siteConfig.experience.label}
+              </p>
             </div>
 
             <div className="lg:col-span-7 space-y-4 text-sm text-[#50504C] leading-relaxed">
               <p>
-                Dipimpin oleh Erfan Radistya, ST, ARTUDIO bertumbuh dari keyakinan bahwa setiap proyek—baik hunian keluarga privat maupun kawasan residensial terencana—membutuhkan ketelitian analitis dari tahap konsep tapak hingga gambar kerja lapangan.
+                Erfan Radistya, ST memimpin ARTUDIO dengan pengalaman lebih dari dua dekade dalam perencanaan bangunan, interior, dan desain visual.
               </p>
               <p>
-                Studio kami menjembatani visi pemilik proyek dengan disiplin konstruksi yang terukur, memastikan tidak ada ruang yang dirancang tanpa fungsi nyata dan tanpa pertimbangan biaya yang transparan.
+                ARTUDIO berkembang dari pengalaman panjang dalam perencanaan bangunan, interior, dan komunikasi visual — dengan kebutuhan pengguna sebagai dasar keputusan desain.
               </p>
             </div>
           </div>

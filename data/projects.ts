@@ -34,7 +34,7 @@ export interface ProjectItem {
   scope: string[];
   landArea: string;
   buildingArea: string;
-  status: "Completed Prototype" | "Concept Development" | "Built Work (Demo)";
+  status: "Concept Study";
   isDemo: boolean;
   thumbnail: string;
   heroImage: string;
@@ -70,44 +70,44 @@ export const projectsData: ProjectItem[] = [
     id: "proj-01",
     number: "01",
     slug: "casa-sidoarjo",
-    title: "Casa Sidoarjo",
+    title: "Casa Courtyard",
     tagline: "A private residential sanctuary calibrated for tropical climate, light shafts, and tactile calm.",
-    location: "Sidoarjo, East Java",
+    location: "Concept study",
     year: "2024",
     category: "Residential Architecture",
     filterCategory: "Architecture",
     scope: ["Concept Design", "Zoning Strategy", "Architectural Drawings", "Facade Development"],
     landArea: "210 m²",
     buildingArea: "275 m²",
-    status: "Completed Prototype",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1600585154340-be6161a56a0c.webp",
+    heroImage: "/images/artudio/photo-1600585154340-be6161a56a0c.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600566753190-17f0baa2a6c3.webp",
         caption: "Main living pavillion with double-height ceiling and seamless terrace connection",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1600210492486-724fe5c67fb0.webp",
         caption: "Dining area adjacent to the internal light well and stone gravel courtyard",
         aspect: "portrait",
       },
       {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600607687939-ce8a6c25118c.webp",
         caption: "Tactile kitchen island in honed travertine with concealed architectural joinery",
         aspect: "landscape",
       },
       {
-        url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600585154526-990dced4db0d.webp",
         caption: "Monolithic staircase formed with board-marked concrete and brass handrail recessed detail",
         aspect: "landscape",
       },
     ],
     brief: {
       clientNeed:
-        "Klien menginginkan hunian keluarga 4 orang yang tenang dan tidak terasa sempit di lahan perkotaan Sidoarjo. Prioritas utama adalah sirkulasi udara alami dan privasi maksimal dari jalan raya tanpa mengorbankan masuknya cahaya matahari.",
+        "Klien menginginkan hunian keluarga 4 orang yang tenang dan tidak terasa sempit di lahan perkotaan. Prioritas utama adalah sirkulasi udara alami dan privasi maksimal dari jalan raya tanpa mengorbankan masuknya cahaya matahari.",
       siteConstraints:
         "Lahan menghadap ke arah barat dengan intensitas panas sore yang signifikan, serta kepadatan bangunan sekitar yang membatasi bukaan samping konvensional.",
       keyChallenge:
@@ -146,38 +146,38 @@ export const projectsData: ProjectItem[] = [
       { title: "Longitudinal Cross-Section", subtitle: "Stack effect ventilation chimney and solar altitude angle analysis", aspect: "16:9", type: "section" },
     ],
     outcome:
-      "Casa Sidoarjo mendefinisikan hunian tropis kontemporer yang hening, efisien energi, dan memiliki identitas arsitektur yang kuat tanpa elemen dekoratif berlebihan.",
+      "Casa Courtyard mendefinisikan hunian tropis kontemporer yang hening, efisien energi, dan memiliki identitas arsitektur yang kuat tanpa elemen dekoratif berlebihan.",
   },
   {
     id: "proj-02",
     number: "02",
     slug: "tropical-courtyard-house",
     title: "Tropical Courtyard House",
-    tagline: "Bridging lush natural landscape with minimalist interior architecture in West Surabaya.",
-    location: "Surabaya, East Java",
+    tagline: "Bridging lush natural landscape with minimalist interior architecture in a lush urban setting.",
+    location: "Concept study",
     year: "2024",
     category: "Architecture + Interior",
     filterCategory: "Architecture",
     scope: ["Masterplan", "Architecture Design", "Custom Interior Built-ins", "Lighting Specification"],
     landArea: "320 m²",
     buildingArea: "360 m²",
-    status: "Completed Prototype",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1600596542815-ffad4c1539a9.webp",
+    heroImage: "/images/artudio/photo-1600596542815-ffad4c1539a9.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600573472591-ee6b68d14c68.webp",
         caption: "Courtyard reflection pool serving as an evaporative cooling element",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1600585152220-90363fe7e115.webp",
         caption: "Library lounge flanked by continuous floor-to-ceiling glass fenestration",
         aspect: "portrait",
       },
       {
-        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1618221195710-dd6b41faaea6.webp",
         caption: "Minimalist master bedroom overlooking the private bamboo perimeter",
         aspect: "landscape",
       },
@@ -186,9 +186,9 @@ export const projectsData: ProjectItem[] = [
       clientNeed:
         "Sebuah kediaman untuk pasangan yang menginginkan koneksi visual langsung ke pepohonan dan air di setiap sudut rumah, dengan interior yang rapi dan bebas dari kekacauan visual.",
       siteConstraints:
-        "Bentuk tapak memanjang (hook) di kawasan perumahan modern Surabaya Barat dengan kebutuhan proteksi angin kencang saat musim hujan.",
+        "Bentuk tapak memanjang (hook) di kawasan perumahan modern dengan kebutuhan proteksi angin kencang saat musim hujan.",
       keyChallenge:
-        "Menyandingkan keterbukaan kaca luas dengan kenyamanan termal iklim tropis pesisir Surabaya.",
+        "Menyandingkan keterbukaan kaca luas dengan kenyamanan termal iklim tropis.",
     },
     designResponse: {
       concept:
@@ -213,7 +213,7 @@ export const projectsData: ProjectItem[] = [
       ],
     },
     materials: [
-      { name: "Batu Candi Hitam Honed", category: "Exterior Base", description: "Batu alam lokal Jawa Timur dengan ketahanan lumut dan warna pekat bertekstur." },
+      { name: "Batu Candi Hitam Honed", category: "Exterior Base", description: "Batu alam lokal dengan ketahanan lumut dan warna pekat bertekstur." },
       { name: "Ulin Solid Hardwood Decking", category: "Landscape", description: "Kayu ulin Kalimantan tahan air dan rayap untuk dek kolam renang dan teras terbuka." },
       { name: "Microcement Seamless Flooring", category: "Interior", description: "Lantai tanpa nat (seamless) bergradasi warm grey untuk kontinuitas visual ruang." },
       { name: "Low-E Insulated Double Glazing", category: "Glass", description: "Kaca ganda penahan panas inframerah untuk bukaan kaca format besar." },
@@ -222,7 +222,7 @@ export const projectsData: ProjectItem[] = [
       { title: "Master Spatial Plan & Reflection Pool", subtitle: "Dual-pavilion circulation and cross-ventilation axes", aspect: "16:9", type: "ground-plan" },
     ],
     outcome:
-      "Kombinasi air, kayu, dan bayangan kanopi menciptakan atmosfer peristirahatan yang damai di tengah iklim Surabaya yang dinamis.",
+      "Kombinasi air, kayu, dan bayangan kanopi menciptakan atmosfer peristirahatan yang damai di tengah iklim tropis yang dinamis.",
   },
   {
     id: "proj-03",
@@ -230,25 +230,25 @@ export const projectsData: ProjectItem[] = [
     slug: "a-house-in-gresik",
     title: "A House in Gresik",
     tagline: "Adaptive architectural renovation restructuring structural efficiency and daylight penetration.",
-    location: "Gresik, East Java",
+    location: "Concept study",
     year: "2023",
     category: "Residential Renovation",
     filterCategory: "Renovation",
     scope: ["Structural Retrofitting", "Spatial Reorganization", "Facade Modernization", "Interior Refinement"],
     landArea: "180 m²",
     buildingArea: "220 m²",
-    status: "Completed Prototype",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1600566752355-35792bedcfea.webp",
+    heroImage: "/images/artudio/photo-1600566752355-35792bedcfea.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600585154363-67eb9e2e2099.webp",
         caption: "Restructured open dining area previously blocked by load-bearing interior partition",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1600210491892-03d54c0aaf87.webp",
         caption: "New vertical steel staircase allowing natural light to cascade to the lower floor",
         aspect: "portrait",
       },
@@ -292,7 +292,7 @@ export const projectsData: ProjectItem[] = [
       { title: "Before vs After Demolition & New Structural Grid", subtitle: "Structural retention mapping and light chimney insertion", aspect: "16:9", type: "ground-plan" },
     ],
     outcome:
-      "Transformasi bangunan berusia 25 tahun menjadi hunian kontemporer bernilai estetika dan fungsional tinggi dengan efisiensi biaya hingga 40% dibanding bangun baru.",
+      "Pendekatan renovasi mengeksplorasi pembaruan fungsi, cahaya, dan karakter ruang dari kondisi existing.",
   },
   {
     id: "proj-04",
@@ -300,25 +300,25 @@ export const projectsData: ProjectItem[] = [
     slug: "nusa-residence",
     title: "Nusa Residence Masterplan",
     tagline: "High-density residential enclave masterplanning prioritizing green microclimate and architectural coherence.",
-    location: "Sidoarjo Outer Ring, East Java",
+    location: "Concept study",
     year: "2024",
     category: "Developer Planning",
     filterCategory: "Developer",
     scope: ["Masterplanning", "Prototype Unit Typology", "Landscape Strategy", "Gate & Identity Architecture"],
     landArea: "12,500 m²",
     buildingArea: "Typology 90 m² – 160 m²",
-    status: "Concept Development",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1545324418-cc1a3fa10c00.webp",
+    heroImage: "/images/artudio/photo-1545324418-cc1a3fa10c00.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1512917774080-9991f1c4c750.webp",
         caption: "Modular prototype facade with standardized structural bays and natural timber louvers",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1506157786151-b8491531f063.webp",
         caption: "Pedestrian-first central green spine connecting all residential cul-de-sacs",
         aspect: "portrait",
       },
@@ -362,33 +362,33 @@ export const projectsData: ProjectItem[] = [
       { title: "Masterplan Zoning & Circulation Grid", subtitle: "Cul-de-sac traffic calming and pedestrian priority network", aspect: "16:9", type: "zoning-diagram" },
     ],
     outcome:
-      "Perencanaan kawasan yang mengoptimalkan ROI developer hingga 18% lebih tinggi berkat diferensiasi arsitektur yang kuat dan ramah lingkungan.",
+      "Dirancang untuk menyeimbangkan densitas unit, kualitas ruang terbuka, dan konsistensi karakter kawasan.",
   },
   {
     id: "proj-05",
     number: "05",
     slug: "monochrome-workspace",
     title: "Monochrome Workspace",
-    tagline: "Restrained acoustic and spatial design for an architectural technology firm in Surabaya.",
-    location: "Surabaya Center, East Java",
+    tagline: "Restrained acoustic and spatial design for an architectural technology firm in an urban setting.",
+    location: "Concept study",
     year: "2024",
     category: "Commercial & Office",
     filterCategory: "Commercial",
     scope: ["Interior Architecture", "Acoustic Engineering", "Custom Workstations", "Lighting Automation"],
     landArea: "280 m²",
     buildingArea: "280 m²",
-    status: "Completed Prototype",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1497366216548-37526070297c.webp",
+    heroImage: "/images/artudio/photo-1497366216548-37526070297c.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1497366811353-6870744d04b2.webp",
         caption: "Formal conference room with integrated fluted wall acoustic treatment",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1497215728101-856f4ea42174.webp",
         caption: "Individual focus alcoves providing deep-work privacy in an open-office environment",
         aspect: "portrait",
       },
@@ -436,25 +436,25 @@ export const projectsData: ProjectItem[] = [
     slug: "terrace-house",
     title: "Terrace House",
     tagline: "Interlocking staggered terraces capturing cool mountain breezes in highland Malang.",
-    location: "Malang, East Java",
+    location: "Concept study",
     year: "2023",
     category: "Architecture + Interior",
     filterCategory: "Interior",
     scope: ["Topographical Design", "Architecture Planning", "Custom Joinery", "Terrace Landscaping"],
     landArea: "260 m²",
     buildingArea: "290 m²",
-    status: "Completed Prototype",
+    status: "Concept Study",
     isDemo: true, // DEMO_CONTENT
-    thumbnail: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85",
+    thumbnail: "/images/artudio/photo-1600607687920-4e2a09cf159d.webp",
+    heroImage: "/images/artudio/photo-1600607687920-4e2a09cf159d.webp",
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+        url: "/images/artudio/photo-1600566753086-00f18fb6b3ea.webp",
         caption: "Stepped living volume responding directly to the natural hillside topography",
         aspect: "wide",
       },
       {
-        url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+        url: "/images/artudio/photo-1600585154526-990dced4db0d.webp",
         caption: "Open fireside reading room framed by textured grey plaster and endemic flora",
         aspect: "portrait",
       },

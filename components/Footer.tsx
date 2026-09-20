@@ -25,7 +25,7 @@ export default function Footer() {
               Thoughtful spaces. Built around the way you live.
             </p>
             <p className="text-sm text-[#8A8880] max-w-md leading-relaxed">
-              Membantu mewujudkan hunian, interior, renovasi, dan pengembangan kawasan melalui pendekatan arsitektur terukur, tenang, dan presisi.
+              Mendampingi perencanaan arsitektur, interior, renovasi, pengembangan properti, dan identitas visual dengan pendekatan yang tenang dan terarah.
             </p>
           </div>
 
@@ -81,17 +81,15 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <span className="text-white block font-medium text-xs uppercase tracking-wider mb-0.5">Email:</span>
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
-                  {siteConfig.contact.email}
-                </a>
+                <span className="text-white block font-medium text-xs uppercase tracking-wider mb-0.5">WhatsApp:</span>
+                <span className="text-white/90">{siteConfig.contact.displayWhatsapp}</span>
               </p>
               <p>
                 <span className="text-white block font-medium text-xs uppercase tracking-wider mb-0.5">Principal / Founder:</span>
-                <span className="text-white/90">{siteConfig.founder.name}</span>
+                <span className="text-white/90">{siteConfig.principal.name}</span>
               </p>
               <p className="text-xs text-[#8A8880]">
-                {siteConfig.contact.locationNote}
+                {siteConfig.address.district}<br />{siteConfig.address.city}, {siteConfig.address.province}
               </p>
             </div>
           </div>
@@ -102,7 +100,7 @@ export default function Footer() {
           <div className="space-y-1">
             <p>© {new Date().getFullYear()} ARTUDIO Interior & Architecture. All rights reserved.</p>
             <p className="text-[11px] text-[#8A8880]/80">
-              Internal Prototype • DEMO_CONTENT: Selected imagery and sample projects are realistic concept demonstrations.
+              Sebagian visual dan studi proyek pada versi ini merupakan materi konsep untuk demonstrasi presentasi.
             </p>
           </div>
           <div className="flex items-center space-x-6 text-[11px] uppercase tracking-wider">
